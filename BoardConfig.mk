@@ -20,7 +20,7 @@ LOCAL_PATH := device/oppo/a37f
 TARGET_BOARD_PLATFORM := msm8916
 
 # Architecture
-TARGET_ARCH := arm
+TARGET_ARCH := arm64
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -39,13 +39,8 @@ BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_TAGS_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset 0x00000100 --dt $(LOCAL_PATH)/prebuilt/dt.img
 
 TARGET_PREBUILT_KERNEL := device/oppo/a37f/prebuilt/kernel.gz
-TARGET_KERNEL_SOURCE := 
-ifneq ($(FORCE_32_BIT),true)
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-else
-TARGET_KERNEL_ARCH := arm
-endif
 
 # TARGET IMAGES
 TARGET_USERIMAGES_USE_EXT4 := true
