@@ -16,23 +16,11 @@
 
 LOCAL_PATH := device/oppo/a37f
 
-# Platform
-TARGET_BOARD_PLATFORM := msm8916
-
-# Architecture
-TARGET_BOARD_SUFFIX := _64
-TARGET_ARCH := arm64
-TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
-TARGET_ARCH_VARIANT := armv8-a
-TARGET_ARCH_VARIANT_CPU := cortex-a9
-TARGET_CPU_VARIANT := cortex-a53
-TARGET_2ND_CPU_VARIANT := generic
-TARGET_CPU_SMP := true
+-include device/cyanogen/msm8916-common/BoardConfigCommon.mk
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk ramoops.mem_address=0x9ff00000 ramoops.mem_size=0x400000 ramoops.record_size=0x40000
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk ramoops.mem_address=0x9ff00000 ramoops.mem_size=0x400000 ramoops.record_size=0x40000 androidboot.selinux=premissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET     := 0x01000000
@@ -48,14 +36,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # RECOVERY
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
-
-# PARTTIONS
-BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3154116608
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 59165356032
-BOARD_FLASH_BLOCK_SIZE := 262144
 
 # TWRP stuff
 TW_THEME := portrait_hdpi

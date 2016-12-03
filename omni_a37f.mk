@@ -45,6 +45,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/ueventd.qcom.rc:recovery/root/ueventd.qcom.rc \
 
 # SELinux
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/sepolicy:recovery/root/sepolicy \
-    $(LOCAL_PATH)/recovery/root/sepolicy_debug:recovery/root/sepolicy_debug
+BOARD_SEPOLICY_DIRS += \
+    device/oppo/a37f/sepolicy
