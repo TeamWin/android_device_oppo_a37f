@@ -45,5 +45,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/ueventd.qcom.rc:recovery/root/ueventd.qcom.rc \
 
 # SELinux
+include device/qcom/sepolicy/sepolicy.mk
+
 BOARD_SEPOLICY_DIRS += \
     device/oppo/a37f/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    bluetooth_loader.te \
+    healthd.te \
+    qseecomd.te \
+    surfaceflinger.te \
+    wcnss_service.te \
+    file_contexts \
+    property_contexts
