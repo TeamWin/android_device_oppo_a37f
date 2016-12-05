@@ -1,8 +1,0 @@
-[
-  {
-    "remote":      "github",
-    "repository":  "omnirom/android_device_qcom_sepolicy",
-    "target_path": "device/qcom/sepolicy",
-    "revision":    "android-5.1"
-  }
-]
